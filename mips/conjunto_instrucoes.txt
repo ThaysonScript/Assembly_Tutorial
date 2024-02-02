@@ -1,0 +1,40 @@
+d- 32 registradores de 32 bits
+
+- programa em c -
+f = (g + h) - (i + j);
+
+- mesmo programa em mips -
+add $t0, $s1, $s2   -> adicionar valor s1 e s2 em t0
+add $t1, $s3, $s4   -> adicionar valor s3 e s4 em t1
+add $s0, $t0, $t1   -> subtrair t0, t1 e adicionar em s0
+
+
+- conjunto de instrucao load
+movimenta dados da memoria para o registrador
+leitura de dados da memoria
+
+- conjunto de instrucao store
+movimenta dados do registrador para a memoria
+escrita na memoria
+
+- conjunto de instrucao move
+passar conteudo de um registrador para outro registrador
+nao envolve a memoria ram
+envolve somente a cpu, pois mexe com registradores
+
+- ambiente de programacao
+ide mars .jar
+
+- comandos li $v0
+servem para imprimir ou ler um determinado tipo de dado
+li $v0, 1	-> imprimir inteiro
+li $v0, 2       -> imprimir float
+li $v0, 3       -> imprimir double
+li $v0, 4       -> imprimir string ou char
+
+li $v0, 5       -> ler inteiro
+li $v0, 6       -> ler float
+li $v0, 7       -> ler double
+li $v0, 8       -> ler string ou char
+li $v0, 10       -> encerrar programa principal
+

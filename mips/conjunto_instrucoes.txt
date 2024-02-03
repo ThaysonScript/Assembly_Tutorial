@@ -38,3 +38,39 @@ li $v0, 7       -> ler double
 li $v0, 8       -> ler string ou char
 li $v0, 10       -> encerrar programa principal
 
+- adicione valores a registradores com li
+li $registrador, valor
+
+- adicione valores a registradores com addi
+addi $registrador, $zero, valor		# $zero = 0
+
+- adicao de inteiros
+add	-> somar registradores
+add $t0, $t1, $t2	# registrador t0, t1, t2  -> somar t1 com t2 e colocar em t0
+
+addi	-> adicionar valor em um unico registrador e este sera resultado de outro registrador
+addi $t0, $t1, 15	# 15 sera adicionado no registrador $t1 e sera colocado por fim no registrador $t0, serve como uma soma $t1 + 15
+
+- subtracao de inteiros
+sub	-> instrucao para subtrair
+sub $t0, $t1, $t2	# t0 = t1 - t2
+subi $t0, $t1, 15	# t0 = t1 - 15
+
+- multiplicacao de inteiros
+mul $s0, $t0, $t1	# s0 = t0 * t1
+
+- mover bits ou potencializar valores
+|-- shift / left --|
+sll $t0, $t1, n		# faz shift left de t1 n casas para a esquerda e adiciona em t0
+
+|-- shift / right --|
+srl $s0, $t0, n		# faz shitf right de t0 n casas a direita e adiciona em s0
+
+- dividir inteiros
+div $t0, $t1		# realiza divisao inteira de t0 por t1
+			# parte inteira vai para lo
+			# resto da divisao vai para hi
+mflo $s0		# move conteudo de lo para s0
+mfhi $s1		# move conteudo de hi para s1
+
+

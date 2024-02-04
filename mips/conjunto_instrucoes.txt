@@ -73,4 +73,10 @@ div $t0, $t1		# realiza divisao inteira de t0 por t1
 mflo $s0		# move conteudo de lo para s0
 mfhi $s1		# move conteudo de hi para s1
 
-
+- comandos condicionais
+beq $t1, $t2, rotulo	# se t1 for igual a t2, execute a partir do rotulo
+bne $t1, $t2, rotulo	# se t1 for diferente de t2, execute a partir do rotulo
+blt $t1, $t2, rotulo	# se t1 for menor que t2, execute a partir do rotulo
+bgt $t1, $t2, rotulo	# se t1 for maior que t2, execute a partir do rotulo
+ble $t1, $t2, rotulo	# se t1 for menor ou igual a t2, execute a partir do rotulo
+bge $t1, $t2, rotulo	# se t1 for maior ou igual a t2, execute a partir do rotulo
